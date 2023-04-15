@@ -13,6 +13,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 library(dplyr)
+library(tidyr)
+library(readr)
 
 av <- read.csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/avengers/avengers.csv", stringsAsFactors = FALSE)
 av

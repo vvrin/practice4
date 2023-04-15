@@ -5,6 +5,8 @@ date: "2023-04-14"
 output: html_document
 ---
 
+Github Link: https://github.com/KennedyWendl/DS202-lab2.git
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```

@@ -1,0 +1,25 @@
+---
+title: "Homework9"
+author: "Kennedy Wendl"
+date: "2023-04-14"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(dplyr)
+
+av <- read.csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/avengers/avengers.csv", stringsAsFactors = FALSE)
+av
+
+deaths <- av %>%
+  gather(key = "Time", value = "Death", 11 : 20) %>%
+  mutate(Time = parse_number(Time),
+         Death = if_else(Death == "", "NO", Death))
+
+print(deaths)
+```
+

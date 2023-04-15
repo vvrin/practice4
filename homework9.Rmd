@@ -23,3 +23,9 @@ deaths <- av %>%
 print(deaths)
 ```
 
+(Vrindha) They are shown or directly implied to be killed --> Too see if they were killed, I used the contain function to find the word die in the Notes. if it did exist, I could see who it was correlated to. This would allow me to see who was implied to be killed.
+
+```{r}
+library(dplyr)
+filter_death -> df %>% contains(Notes, die)
+```

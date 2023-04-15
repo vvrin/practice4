@@ -1,6 +1,6 @@
 ---
 title: "Homework9"
-author: "Kennedy Wendl"
+author: "Kennedy Wendl and Vrindha Vegiraju"
 date: "2023-04-14"
 output: html_document
 ---
@@ -34,3 +34,11 @@ filter(timeGreaterThanOne, Death == "NO")
 Kennedy Wendl 
 
 In the FiveThirtyEight analysis, the author mentions how superheros who have died once, have a 2/3 chance of returning. In order to check this claim, I used the filter() function from the dplyr library. I filtered Time by greater than 1 to see what superheros have died more than once. From there I filtered the Death columns to see who is still considered "dead." Of the original 1,730 superheros, 1,353 remain. I believe his claims are true. 
+
+
+```{r}
+library(dplyr)
+grepl("die", deaths$Notes)
+```
+Vrindha:
+They are shown or directly implied to be killed. In the FiveThirtyEight analysis, I used the grepl function to see how many deaths, if any, were included in the notes. From this, I could see the deaths present in the notes using the deaths$Notes.

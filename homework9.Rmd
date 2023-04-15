@@ -23,3 +23,14 @@ deaths <- av %>%
 print(deaths)
 ```
 
+
+```{r}
+
+timeGreaterThanOne = filter(deaths, Time > 1)
+
+filter(timeGreaterThanOne, Death == "NO")
+
+```
+Kennedy Wendl 
+
+In the FiveThirtyEight analysis, the author mentions how superheros who have died once, have a 2/3 chance of returning. In order to check this claim, I used the filter() function from the dplyr library. I filtered Time by greater than 1 to see what superheros have died more than once. From there I filtered the Death columns to see who is still considered "dead." Of the original 1,730 superheros, 1,353 remain. I believe his claims are true. 
